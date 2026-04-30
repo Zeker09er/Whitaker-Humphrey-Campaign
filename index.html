@@ -1,107 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whitaker & Humphrey Campaign</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Whitaker Campaign</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header>
-    <h1>Whitaker for President</h1>
-    <h2>Humphrey for Vice President</h2>
-    <p>Pea Ridge High School Student Council 2026-2027</p>
-</header>
-
-<nav>
-    <a href="#about">About</a>
-    <a href="#candidates">Candidates</a>
-    <a href="policy.html">Policy</a>
-    <a href="#questions">Questions</a>
+<!-- NAV -->
+<nav class="nav">
+    <div class="logo">Whitaker 2026</div>
+    <div>
+        <a href="#about">About</a>
+        <a href="#candidates">Candidates</a>
+        <a href="policy.html">Policy</a>
+        <a href="#questions">Questions</a>
+    </div>
 </nav>
 
-<section id="about">
-    <h2>About Our Campaign</h2>
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Zeke Whitaker</h1>
+        <h2>For Student Council President</h2>
+        <p>With JD Humphrey for Vice President</p>
+        <button onclick="scrollToSection('about')">Learn More</button>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="fade-in">
+    <h2>Our Campaign</h2>
     <p>
-        This campaign is about leadership, representation, and making Pea Ridge High School
-        a better place for every student. While the election structure allows flexibility
-        in vice presidency outcomes, we are campaigning together to bring strong leadership
-        and real results.
+        We’re focused on real leadership, stronger student voice, and building a school
+        environment where everyone feels included and heard.
     </p>
 </section>
 
-<section id="candidates">
-    <h2>Meet the Candidates</h2>
-
-    <div class="candidate">
-        <img src="images/zeke.jpg" alt="Zeke Whitaker">
+<!-- CANDIDATES -->
+<section id="candidates" class="grid fade-in">
+    <div class="card">
+        <img src="images/zeke.jpg">
         <h3>Zeke Whitaker</h3>
-        <p><strong>Running for President</strong></p>
+        <p class="role">President</p>
         <ul>
-            <li>Strong leadership skills</li>
-            <li>Committed to student voice</li>
-            <li>Focused on improving school events</li>
-            <li>Represents all students</li>
+            <li>Leadership</li>
+            <li>Student-focused</li>
+            <li>Event improvement</li>
         </ul>
     </div>
 
-    <div class="candidate">
-        <img src="images/jd.jpg" alt="JD Humphrey">
+    <div class="card">
+        <img src="images/jd.jpg">
         <h3>JD Humphrey</h3>
-        <p><strong>Running for Vice President</strong></p>
+        <p class="role">Vice President</p>
         <ul>
-            <li>Team-oriented and dependable</li>
+            <li>Team-oriented</li>
             <li>Strong communication</li>
-            <li>Encourages student involvement</li>
-            <li>Ready to collaborate</li>
+            <li>Reliable</li>
         </ul>
     </div>
 </section>
 
-<section id="vision">
-    <h2>Our Vision</h2>
-    <ul>
-        <li>Better school events</li>
-        <li>Stronger student voice</li>
-        <li>Improved communication</li>
-        <li>Inclusive school environment</li>
-    </ul>
+<!-- QUESTIONS -->
+<section id="questions" class="fade-in">
+    <h2>Ask Us Anything</h2>
+    <p>Submit questions and we’ll answer them publicly.</p>
+
+    <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true"></iframe>
 </section>
 
-<!-- QUESTIONNAIRE -->
-<section id="questions">
-    <h2>Ask Us Questions</h2>
-    <p>Submit questions or ideas below. We'll answer them on this site.</p>
-
-    <!-- REPLACE LINK WITH YOUR GOOGLE FORM -->
-    <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true"
-        width="100%" height="600" frameborder="0">Loading…</iframe>
-</section>
-
-<section id="answers">
-    <h2>Answers to Student Questions</h2>
+<!-- ANSWERS -->
+<section class="fade-in">
+    <h2>Student Q&A</h2>
 
     <div class="qa">
-        <p><strong>Q: Will you improve school events?</strong></p>
-        <p>A: Yes, we plan to increase student involvement and make events more engaging.</p>
+        <h4>Will events improve?</h4>
+        <p>Yes. We want more engaging, student-driven events.</p>
     </div>
 
     <div class="qa">
-        <p><strong>Q: How will you listen to students?</strong></p>
-        <p>A: Through surveys, open feedback, and direct communication.</p>
+        <h4>How will you listen?</h4>
+        <p>Through surveys, open feedback, and consistent updates.</p>
     </div>
 
 </section>
 
-<section id="support">
+<!-- CTA -->
+<section class="cta">
     <h2>Support the Campaign</h2>
-    <button onclick="showMessage()">Click to Support</button>
-    <p id="supportMessage"></p>
+    <button onclick="showMessage()">Show Support</button>
+    <p id="msg"></p>
 </section>
 
 <footer>
-    <p>© 2026 Whitaker Campaign | Pea Ridge High School</p>
+    Whitaker Campaign © 2026
 </footer>
 
 <script src="script.js"></script>
