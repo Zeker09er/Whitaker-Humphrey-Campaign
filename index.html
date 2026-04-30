@@ -8,7 +8,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav class="nav">
     <div class="logo">Whitaker 2026</div>
     <div>
@@ -20,17 +19,24 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-    <div class="hero-text">
+<section class="hero-split">
+
+    <div class="hero-side left">
         <h1>Zeke Whitaker</h1>
-        <h2>For President</h2>
-        <h1>JD Humphrey</h1>
-        <h2>For Vice President</h2>
-        <button onclick="scrollToSection('about')">Learn More</button>
+        <p>Running for President</p>
     </div>
+
+    <div class="hero-center">
+        <img src="images/hero.jpg" alt="Zeke and JD">
+    </div>
+
+    <div class="hero-side right">
+        <h1>JD Humphrey</h1>
+        <p>Running for Vice President</p>
+    </div>
+
 </section>
 
-<!-- ABOUT -->
 <section id="about" class="fade-in">
     <h2>Our Campaign</h2>
     <p>
@@ -39,7 +45,6 @@
     </p>
 </section>
 
-<!-- CANDIDATES -->
 <section id="candidates" class="grid fade-in">
     <div class="card">
         <img src="images/zeke.jpg">
@@ -64,7 +69,6 @@
     </div>
 </section>
 
-<!-- QUESTIONS -->
 <section id="questions" class="fade-in">
     <h2>Ask Us Anything</h2>
     <p>Submit questions and we’ll answer them publicly.</p>
@@ -72,7 +76,6 @@
     <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true"></iframe>
 </section>
 
-<!-- ANSWERS -->
 <section class="fade-in">
     <h2>Student Q&A</h2>
 
@@ -81,14 +84,8 @@
         <p>Yes. We want more engaging, student-driven events.</p>
     </div>
 
-    <div class="qa">
-        <h4>How will you listen?</h4>
-        <p>Through surveys, open feedback, and consistent updates.</p>
-    </div>
-
 </section>
 
-<!-- CTA -->
 <section class="cta">
     <h2>Support the Campaign</h2>
     <button onclick="showMessage()">Show Support</button>
