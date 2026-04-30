@@ -3,12 +3,10 @@ function showMessage() {
         "Thanks for supporting the campaign!";
 }
 
-// smooth scroll
 function scrollToSection(id) {
     document.getElementById(id).scrollIntoView({ behavior: "smooth" });
 }
 
-// fade-in on scroll
 const elements = document.querySelectorAll('.fade-in');
 
 window.addEventListener('scroll', () => {
