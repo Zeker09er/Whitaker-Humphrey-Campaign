@@ -10,7 +10,6 @@ body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background: var(--light);
-    color: #222;
 }
 
 /* NAV */
@@ -32,28 +31,40 @@ body {
     font-weight: bold;
 }
 
-/* HERO */
-.hero {
-    height: 80vh;
-    background: linear-gradient(rgba(30,42,68,0.8), rgba(30,42,68,0.9)),
-                url('images/zeke.jpg') center/cover;
+/* HERO SPLIT */
+.hero-split {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    background: var(--blue);
+    color: white;
+    padding: 60px 20px;
+    flex-wrap: wrap;
+}
+
+.hero-side {
+    width: 30%;
     text-align: center;
-    color: white;
 }
 
-.hero h1 {
-    font-size: 3em;
+.hero-side h1 {
+    font-size: 2.2em;
 }
 
-.hero button {
-    background: var(--red);
-    border: none;
-    padding: 12px 25px;
-    color: white;
-    cursor: pointer;
+.hero-side p {
+    color: #ccc;
+}
+
+.hero-center {
+    width: 30%;
+    text-align: center;
+}
+
+.hero-center img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    border: 4px solid var(--red);
 }
 
 /* SECTIONS */
@@ -99,14 +110,6 @@ section {
     margin: 15px 0;
 }
 
-/* POLICY */
-.policy {
-    background: white;
-    padding: 20px;
-    margin: 20px 0;
-    border-left: 5px solid var(--blue);
-}
-
 /* CTA */
 .cta {
     text-align: center;
@@ -147,4 +150,16 @@ iframe {
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .hero-split {
+        flex-direction: column;
+    }
+
+    .hero-side, .hero-center {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
