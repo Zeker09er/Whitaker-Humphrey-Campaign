@@ -52,6 +52,17 @@
     .hero {
         background: url('hero.png') center/cover no-repeat;
         height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-shadow: 2px 2px 5px black;
+    }
+
+    .countdown {
+        font-size: 28px;
+        margin-top: 10px;
+        color: #ff2d2d;
     }
 
     .card-container {
@@ -68,6 +79,12 @@
         border-radius: 10px;
         width: 250px;
         border: 1px solid #8b0000;
+    }
+
+    .card img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
     }
 
     h2 {
@@ -94,24 +111,30 @@
 </nav>
 
 <div id="home" class="page active">
-    <div class="hero"></div>
+    <div class="hero">
+        <h1>Vote May 13th</h1>
+        <div class="countdown" id="countdown"></div>
+    </div>
 
     <h2>Meet the Candidates</h2>
 
     <div class="card-container">
         <div class="card">
+            <img src="zeke.jpg" alt="Zeke Whitaker">
             <h3>Zeke Whitaker</h3>
             <p>President</p>
             <p>Lead with purpose. Serve the students. Build trust.</p>
         </div>
 
         <div class="card">
+            <img src="jd.jpg" alt="JD Humphrey">
             <h3>JD Humphrey</h3>
             <p>Vice President</p>
             <p>Be heard. Support every student. Serve with integrity.</p>
         </div>
 
         <div class="card">
+            <img src="cate.jpg" alt="Cate Parker">
             <h3>Cate Parker</h3>
             <p>Secretary</p>
             <p>Organized. Detail-focused. Dedicated.</p>
@@ -144,7 +167,6 @@
     <h2>Ask Us a Question</h2>
     <p>We want to hear from you!</p>
 
-    <!-- Replace the src link with your actual Google Form embed link -->
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfExample/viewform?embedded=true">Loading…</iframe>
 </div>
 
@@ -155,6 +177,29 @@
         });
         document.getElementById(pageId).classList.add('active');
     }
+
+    // Countdown Timer
+    const countdownElement = document.getElementById('countdown');
+    const electionDate = new Date('May 13, 2026 15:20:00').getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = electionDate - now;
+
+        if (distance < 0) {
+            countdownElement.innerHTML = "Voting has ended";
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    setInterval(updateCountdown, 1000);
 </script>
 
 </body>
