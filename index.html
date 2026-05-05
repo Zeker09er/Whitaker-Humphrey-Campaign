@@ -9,91 +9,133 @@
 <body>
 
 <nav class="nav">
-    <div class="logo">Whitaker & Humphrey 2026</div>
-    <div>
+    <div class="logo">Whitaker • Humphrey • Parker 2026</div>
+    <div class="nav-links">
         <a href="#about">About</a>
         <a href="#candidates">Candidates</a>
+        <a href="#mission">Mission</a>
         <a href="policy.html">Policy</a>
         <a href="#questions">Questions</a>
     </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero-split">
-
-    <div class="hero-side left">
-        <h1>Zeke Whitaker</h1>
-        <p>Running for President</p>
+<section class="hero">
+    <div class="hero-overlay">
+        <h1>Leadership That Listens</h1>
+        <p>Building a stronger student community together</p>
+        <a href="#candidates" class="btn">Meet the Team</a>
     </div>
-
-    <div class="hero-center">
-        <img src="images/hero.jpg" alt="Zeke and JD">
-    </div>
-
-    <div class="hero-side right">
-        <h1>JD Humphrey</h1>
-        <p>Running for Vice President</p>
-    </div>
-
 </section>
 
-<section id="about" class="fade-in">
-    <h2>Our Campaign</h2>
+<!-- ABOUT -->
+<section id="about" class="section">
+    <h2>About Our Campaign</h2>
     <p>
-        We’re focused on real leadership, stronger student voice, and building a school
-        environment where everyone feels included and heard.
+        Our campaign is built on leadership, transparency, and action. 
+        We believe every student deserves a voice and an environment 
+        where they feel included, heard, and inspired.
     </p>
 </section>
 
-<section id="candidates" class="grid fade-in">
-    <div class="card">
-        <img src="images/zeke.jpg">
-        <h3>Zeke Whitaker</h3>
-        <p class="role">President</p>
-        <ul>
-            <li>Leadership</li>
-            <li>Student-focused</li>
-            <li>Event improvement</li>
-        </ul>
-    </div>
+<!-- CANDIDATES -->
+<section id="candidates" class="section">
+    <h2>Meet the Candidates</h2>
 
-    <div class="card">
-        <img src="images/jd.jpg">
-        <h3>JD Humphrey</h3>
-        <p class="role">Vice President</p>
-        <ul>
-            <li>Team-oriented</li>
-            <li>Strong communication</li>
-            <li>Reliable</li>
-        </ul>
+    <div class="grid">
+
+        <div class="card">
+            <img src="images/zeke.jpg">
+            <h3>Zeke Whitaker</h3>
+            <p class="role">President</p>
+            <ul>
+                <li>Strong leadership</li>
+                <li>Student-first mindset</li>
+                <li>Event innovation</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <img src="images/jd.jpg">
+            <h3>JD Humphrey</h3>
+            <p class="role">Vice President</p>
+            <ul>
+                <li>Team-oriented</li>
+                <li>Clear communication</li>
+                <li>Dependable</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <img src="images/cate.jpg">
+            <h3>Cate Parker</h3>
+            <p class="role">Secretary</p>
+            <ul>
+                <li>Organized & detail-focused</li>
+                <li>Strong listener</li>
+                <li>Dedicated to student voice</li>
+            </ul>
+        </div>
+
     </div>
 </section>
 
-<section id="questions" class="fade-in">
+<!-- MISSION -->
+<section id="mission" class="section alt">
+    <h2>Our Mission</h2>
+    <div class="grid-3">
+        <div>
+            <h4>Representation</h4>
+            <p>Every student deserves to be heard and represented fairly.</p>
+        </div>
+        <div>
+            <h4>Engagement</h4>
+            <p>We will improve events and increase student participation.</p>
+        </div>
+        <div>
+            <h4>Transparency</h4>
+            <p>Open communication between leadership and students.</p>
+        </div>
+    </div>
+</section>
+
+<!-- QUESTIONS -->
+<section id="questions" class="section">
     <h2>Ask Us Anything</h2>
     <p>Submit questions and we’ll answer them publicly.</p>
 
     <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true"></iframe>
 </section>
 
-<section class="fade-in">
+<!-- Q&A -->
+<section class="section alt">
     <h2>Student Q&A</h2>
 
     <div class="qa">
         <h4>Will events improve?</h4>
-        <p>Yes. We want more engaging, student-driven events.</p>
+        <p>Yes. We plan to make events more engaging and student-driven.</p>
     </div>
 
+    <div class="qa">
+        <h4>How will you listen to students?</h4>
+        <p>Through surveys, open forums, and direct communication.</p>
+    </div>
 </section>
 
+<!-- CTA -->
 <section class="cta">
     <h2>Support the Campaign</h2>
+    <p>Your voice matters. Be part of the change.</p>
     <button onclick="showMessage()">Show Support</button>
     <p id="msg"></p>
 </section>
 
+<!-- FOOTER -->
 <footer>
-    Whitaker Campaign © 2026
+    <div class="footer-content">
+        <p>Whitaker • Humphrey • Parker Campaign © 2026</p>
+        <p>Contact: whitakercampaign@email.com</p>
+    </div>
 </footer>
 
 <script src="script.js"></script>
