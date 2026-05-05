@@ -3,147 +3,159 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Whitaker Campaign</title>
-<link rel="stylesheet" href="styles.css">
+<title>Pea Ridge Campaign 2026-2027</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0a0a0a;
+        color: white;
+    }
+
+    header {
+        background: linear-gradient(90deg, #8b0000, #000000);
+        padding: 20px;
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        background: #111;
+    }
+
+    nav button {
+        background: none;
+        border: none;
+        color: white;
+        padding: 15px 25px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    nav button:hover {
+        background: #8b0000;
+    }
+
+    .page {
+        display: none;
+        padding: 40px;
+        text-align: center;
+    }
+
+    .active {
+        display: block;
+    }
+
+    .hero {
+        background: url('hero.png') center/cover no-repeat;
+        height: 400px;
+    }
+
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .card {
+        background: #111;
+        padding: 20px;
+        border-radius: 10px;
+        width: 250px;
+        border: 1px solid #8b0000;
+    }
+
+    h2 {
+        color: #ff2d2d;
+    }
+
+    iframe {
+        width: 100%;
+        height: 600px;
+        border: none;
+        margin-top: 20px;
+    }
+
+</style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav class="nav">
-    <div class="logo">Whitaker • Humphrey • Parker 2026</div>
-    <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#candidates">Candidates</a>
-        <a href="#mission">Mission</a>
-        <a href="policy.html">Policy</a>
-        <a href="#questions">Questions</a>
-    </div>
+<header>Pea Ridge High School Blackhawks Campaign</header>
+
+<nav>
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('policies')">Policies</button>
+    <button onclick="showPage('questions')">Ask a Question</button>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
+<div id="home" class="page active">
+    <div class="hero"></div>
 
-    <div class="hero-overlay">
-        <h1>Leadership That Listens</h1>
-        <p>Building a stronger student community together</p>
-    </div>
-
-    <div class="hero-image">
-        <img src="images/hero.png" alt="Whitaker Campaign Team">
-    </div>
-
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="section">
-    <h2>About Our Campaign</h2>
-    <p>
-        Our campaign is built on leadership, transparency, and action. 
-        We believe every student deserves a voice and an environment 
-        where they feel included, heard, and inspired.
-    </p>
-</section>
-
-<!-- CANDIDATES -->
-<section id="candidates" class="section">
     <h2>Meet the Candidates</h2>
 
-    <div class="grid">
-
+    <div class="card-container">
         <div class="card">
-            <img src="images/zeke.jpg">
             <h3>Zeke Whitaker</h3>
-            <p class="role">President</p>
-            <ul>
-                <li>Strong leadership</li>
-                <li>Student-first mindset</li>
-                <li>Event innovation</li>
-            </ul>
+            <p>President</p>
+            <p>Lead with purpose. Serve the students. Build trust.</p>
         </div>
 
         <div class="card">
-            <img src="images/jd.jpg">
             <h3>JD Humphrey</h3>
-            <p class="role">Vice President</p>
-            <ul>
-                <li>Team-oriented</li>
-                <li>Clear communication</li>
-                <li>Dependable</li>
-            </ul>
+            <p>Vice President</p>
+            <p>Be heard. Support every student. Serve with integrity.</p>
         </div>
 
         <div class="card">
-            <img src="images/cate.jpg">
             <h3>Cate Parker</h3>
-            <p class="role">Secretary</p>
-            <ul>
-                <li>Organized & detail-focused</li>
-                <li>Strong listener</li>
-                <li>Dedicated to student voice</li>
-            </ul>
-        </div>
-
-    </div>
-</section>
-
-<!-- MISSION -->
-<section id="mission" class="section alt">
-    <h2>Our Mission</h2>
-    <div class="grid-3">
-        <div>
-            <h4>Representation</h4>
-            <p>Every student deserves to be heard and represented fairly.</p>
-        </div>
-        <div>
-            <h4>Engagement</h4>
-            <p>We will improve events and increase student participation.</p>
-        </div>
-        <div>
-            <h4>Transparency</h4>
-            <p>Open communication between leadership and students.</p>
+            <p>Secretary</p>
+            <p>Organized. Detail-focused. Dedicated.</p>
         </div>
     </div>
-</section>
+</div>
 
-<!-- QUESTIONS -->
-<section id="questions" class="section">
-    <h2>Ask Us Anything</h2>
-    <p>Submit questions and we’ll answer them publicly.</p>
+<div id="policies" class="page">
+    <h2>Our Policies</h2>
 
-    <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true"></iframe>
-</section>
+    <div class="card-container">
+        <div class="card">
+            <h3>Student Voice</h3>
+            <p>We will actively listen and represent every student.</p>
+        </div>
 
-<!-- Q&A -->
-<section class="section alt">
-    <h2>Student Q&A</h2>
+        <div class="card">
+            <h3>School Spirit</h3>
+            <p>Increase events, engagement, and Blackhawk pride.</p>
+        </div>
 
-    <div class="qa">
-        <h4>Will events improve?</h4>
-        <p>Yes. We plan to make events more engaging and student-driven.</p>
+        <div class="card">
+            <h3>Transparency</h3>
+            <p>Open communication between students and leadership.</p>
+        </div>
     </div>
+</div>
 
-    <div class="qa">
-        <h4>How will you listen to students?</h4>
-        <p>Through surveys, open forums, and direct communication.</p>
-    </div>
-</section>
+<div id="questions" class="page">
+    <h2>Ask Us a Question</h2>
+    <p>We want to hear from you!</p>
 
-<!-- CTA -->
-<section class="cta">
-    <h2>Support the Campaign</h2>
-    <p>Your voice matters. Be part of the change.</p>
-    <button onclick="showMessage()">Show Support</button>
-    <p id="msg"></p>
-</section>
+    <!-- Replace the src link with your actual Google Form embed link -->
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfExample/viewform?embedded=true">Loading…</iframe>
+</div>
 
-<!-- FOOTER -->
-<footer>
-    <div class="footer-content">
-        <p>Whitaker • Humphrey • Parker Campaign © 2026</p>
-        <p>Contact: whitakercampaign@email.com</p>
-    </div>
-</footer>
+<script>
+    function showPage(pageId) {
+        document.querySelectorAll('.page').forEach(page => {
+            page.classList.remove('active');
+        });
+        document.getElementById(pageId).classList.add('active');
+    }
+</script>
 
-<script src="script.js"></script>
 </body>
 </html>
